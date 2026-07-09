@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Arya — Your AI Wealth Advisor, Inside IDBI</title>
+    <meta
+      name="description"
+      content="IDBI Innovate 2026 hackathon prototype. Avatar-based AI wealth advisor with 14 specialist agents."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ─── DEMO FRAME (desktop chrome around the phone) ────────────────────── -->
+    <div class="demo-shell">
+      <aside class="demo-sidebar" id="demoSidebar">
+        <div class="demo-brand">
+          <div class="demo-brand-mark">IDBI</div>
+          <div class="demo-brand-title">Innovate 2026</div>
+        </div>
+        <h1 class="demo-title">Arya</h1>
+        <p class="demo-subtitle">
+          Your AI Wealth Advisor, inside your bank app.
+        </p>
+
+        <div class="demo-tagline">
+          <span class="tag">14 agents</span>
+          <span class="tag">7+2 languages</span>
+          <span class="tag">Bank-embedded</span>
+          <span class="tag">RBI-AA consented</span>
+        </div>
+
+        <h3 class="demo-h3">Try these hero flows</h3>
+        <ol class="demo-list">
+          <li><b>Home</b> — 3 Arya-initiated wins on salary day</li>
+          <li>
+            <b>Wealth</b> — Consolidated net worth: IDBI + Groww + Zerodha + PF
+            + Cards
+          </li>
+          <li>
+            <b>Chat</b> — Ask <i>"Can I afford an iPhone?"</i> or
+            <i>"How do I save tax?"</i>
+          </li>
+          <li><b>Goals</b> — Money Jars with AI SIP recommendations</li>
+          <li>
+            <b>More → Bill Negotiator</b> — ₹48K/yr back in Priya's pocket
+          </li>
+          <li><b>More → Credit Coach</b> — 720 → 760 in 90 days</li>
+          <li><b>More → Purchase Advisor</b> — 3-branch iPhone answer</li>
+        </ol>
+
+        <h3 class="demo-h3">Prototype notes</h3>
+        <ul class="demo-list">
+          <li>
+            Fully client-side. No API. All data is illustrative (Persona: Priya,
+            28, Bengaluru).
+          </li>
+          <li>Ports 1:1 to React Native for v1 in the IDBI mobile app.</li>
+          <li>
+            Every recommendation shown here goes through the
+            <b>Compliance Guardrail</b> agent — every "Do it" is
+            non-discretionary (customer approves, bank executes).
+          </li>
+        </ul>
+
+        <div class="demo-footer">
+          <b>Team</b> · Hackathon submission · Prototype v0.1
+        </div>
+      </aside>
+
+      <!-- ─── THE PHONE ────────────────────────────────────────────────── -->
+      <div class="phone">
+        <!-- Fake status bar -->
+        <div class="phone-status">
+          <span>9:41</span>
+          <span class="phone-status-right">
+            <span aria-hidden="true">●●●●</span>
+            <span aria-hidden="true">📶</span>
+            <span aria-hidden="true">🔋</span>
+          </span>
+        </div>
+
+        <!-- App header (dynamic per view) -->
+        <header class="app-header" id="appHeader">
+          <div class="app-header-left">
+            <div class="app-logo">IDBI</div>
+            <div class="app-header-title" id="appHeaderTitle">Home</div>
+          </div>
+          <div class="app-header-right">
+            <button class="lang-picker" id="langPicker" aria-label="Language">
+              EN
+            </button>
+            <button class="icon-btn" aria-label="Notifications">🔔</button>
+          </div>
+        </header>
+
+        <!-- Rendered by app.js -->
+        <main id="viewRoot" class="view-root" role="main"></main>
+
+        <!-- Bottom nav -->
+        <nav class="bottom-nav" role="tablist" aria-label="Primary">
+          <button
+            class="nav-btn active"
+            data-tab="home"
+            role="tab"
+            aria-selected="true"
+          >
+            <span class="nav-icon">🏠</span><span class="nav-label">Home</span>
+          </button>
+          <button
+            class="nav-btn"
+            data-tab="wealth"
+            role="tab"
+            aria-selected="false"
+          >
+            <span class="nav-icon">📊</span
+            ><span class="nav-label">Wealth</span>
+          </button>
+          <button
+            class="nav-btn nav-btn-arya"
+            data-tab="chat"
+            role="tab"
+            aria-selected="false"
+            aria-label="Chat with Arya"
+          >
+            <span class="arya-orb" aria-hidden="true">
+              <svg viewBox="0 0 40 40" width="34" height="34">
+                <defs>
+                  <radialGradient id="orbGrad" cx="30%" cy="30%">
+                    <stop offset="0%" stop-color="#FFD34E" />
+                    <stop offset="100%" stop-color="#F2A900" />
+                  </radialGradient>
+                </defs>
+                <circle cx="20" cy="20" r="18" fill="url(#orbGrad)" />
+                <circle cx="14" cy="17" r="2.2" fill="#0B2545" />
+                <circle cx="26" cy="17" r="2.2" fill="#0B2545" />
+                <path
+                  d="M13 25 Q20 30 27 25"
+                  stroke="#0B2545"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span class="nav-label">Arya</span>
+          </button>
+          <button
+            class="nav-btn"
+            data-tab="goals"
+            role="tab"
+            aria-selected="false"
+          >
+            <span class="nav-icon">🎯</span><span class="nav-label">Goals</span>
+          </button>
+          <button
+            class="nav-btn"
+            data-tab="more"
+            role="tab"
+            aria-selected="false"
+          >
+            <span class="nav-icon">⋯</span><span class="nav-label">More</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ─── LANGUAGE SHEET (bottom sheet) ─────────────────────────────────── -->
+    <div class="sheet-overlay" id="langSheet" hidden>
+      <div class="sheet">
+        <div class="sheet-handle"></div>
+        <h3>Choose language</h3>
+        <p class="muted">
+          Arya replies in your language. Multilingual chat is a v1 feature.
+        </p>
+        <div class="lang-grid">
+          <button class="lang-opt" data-lang="en">English</button>
+          <button class="lang-opt" data-lang="hi">हिन्दी</button>
+          <button class="lang-opt" data-lang="mr">मराठी</button>
+          <button class="lang-opt" data-lang="ta">தமிழ்</button>
+          <button class="lang-opt" data-lang="te">తెలుగు</button>
+          <button class="lang-opt" data-lang="kn">ಕನ್ನಡ</button>
+          <button class="lang-opt" data-lang="bn">বাংলা</button>
+          <button class="lang-opt" data-lang="gu">ગુજરાતી</button>
+          <button class="lang-opt" data-lang="pa">ਪੰਜਾਬੀ</button>
+        </div>
+        <button class="btn-secondary sheet-close" id="langSheetClose">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- ─── ACTION CONFIRMATION TOAST ─────────────────────────────────────── -->
+    <div class="toast" id="toast" hidden role="status" aria-live="polite">
+      <div class="toast-icon">✓</div>
+      <div class="toast-body">
+        <div class="toast-title" id="toastTitle">Done</div>
+        <div class="toast-msg" id="toastMsg"></div>
+      </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

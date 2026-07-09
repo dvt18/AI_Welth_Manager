@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arya — AI Wealth Advisor · IDBI Bank</title>
+  <meta name="description" content="Arya is an AI-powered wealth advisor built for IDBI Bank customers. See net worth, jars, bills, credit, tax and more.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══ TOP BAR ═══════════════════════════════════════════════════ -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="brand">
+        <div class="brand-mark">IDBI</div>
+        <div class="brand-txt">
+          <div class="brand-title">IDBI Bank</div>
+          <div class="brand-sub">Arya · AI Wealth Advisor</div>
+        </div>
+      </div>
+    </div>
+    <div class="topbar-center">
+      <div class="global-search">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Search accounts, jars, agents…" aria-label="Global search">
+        <span class="search-hint">⌘K</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <button class="icon-btn" id="langBtn" title="Language">
+        <span class="lang-flag">🌐</span>
+        <span id="langLabel">EN</span>
+        <span class="caret">▾</span>
+      </button>
+      <button class="icon-btn notif" title="Notifications">
+        🔔<span class="notif-dot">3</span>
+      </button>
+      <button class="profile-chip" id="profileBtn" title="Profile">
+        <div class="avatar-circle">PS</div>
+        <div class="profile-txt">
+          <div class="profile-name">Priya Sharma</div>
+          <div class="profile-sub">IDBI · XXXX 4521</div>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══ MAIN LAYOUT ═══════════════════════════════════════════════ -->
+  <div class="app-shell">
+
+    <!-- ─── SIDEBAR ─────────────────────────────────────────────── -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="side-nav" aria-label="Primary">
+        <div class="nav-section-title">Overview</div>
+        <button class="side-nav-btn active" data-tab="overview">
+          <span class="sn-icon">🏠</span>
+          <span class="sn-label">Dashboard</span>
+        </button>
+        <button class="side-nav-btn" data-tab="wealth">
+          <span class="sn-icon">💼</span>
+          <span class="sn-label">My Wealth</span>
+        </button>
+        <button class="side-nav-btn" data-tab="goals">
+          <span class="sn-icon">🎯</span>
+          <span class="sn-label">Money Jars</span>
+        </button>
+
+        <div class="nav-section-title">Growth</div>
+        <button class="side-nav-btn" data-tab="bills">
+          <span class="sn-icon">✂️</span>
+          <span class="sn-label">Bill Negotiator</span>
+          <span class="sn-badge sn-badge-gold">₹48K</span>
+        </button>
+        <button class="side-nav-btn" data-tab="credit">
+          <span class="sn-icon">📈</span>
+          <span class="sn-label">Credit Coach</span>
+          <span class="sn-badge sn-badge-blue">720</span>
+        </button>
+        <button class="side-nav-btn" data-tab="tax">
+          <span class="sn-icon">🧮</span>
+          <span class="sn-label">Tax Optimizer</span>
+        </button>
+        <button class="side-nav-btn" data-tab="portfolio">
+          <span class="sn-icon">⚕️</span>
+          <span class="sn-label">Portfolio Doctor</span>
+        </button>
+        <button class="side-nav-btn" data-tab="stock">
+          <span class="sn-icon">📊</span>
+          <span class="sn-label">Stock Advisor</span>
+        </button>
+
+        <div class="nav-section-title">Life</div>
+        <button class="side-nav-btn" data-tab="retirement">
+          <span class="sn-icon">🌴</span>
+          <span class="sn-label">Retirement</span>
+        </button>
+        <button class="side-nav-btn" data-tab="purchase">
+          <span class="sn-icon">🛒</span>
+          <span class="sn-label">Can I afford this?</span>
+        </button>
+        <button class="side-nav-btn" data-tab="subscriptions">
+          <span class="sn-icon">📺</span>
+          <span class="sn-label">Subscriptions</span>
+        </button>
+
+        <div class="nav-section-title">Arya</div>
+        <button class="side-nav-btn" data-tab="memory">
+          <span class="sn-icon">🧠</span>
+          <span class="sn-label">Memory</span>
+        </button>
+        <button class="side-nav-btn" data-tab="agents">
+          <span class="sn-icon">🤖</span>
+          <span class="sn-label">AI Agents</span>
+          <span class="sn-badge sn-badge-gray">14</span>
+        </button>
+        <button class="side-nav-btn" data-tab="trust">
+          <span class="sn-icon">🛡️</span>
+          <span class="sn-label">Trust & Compliance</span>
+        </button>
+      </nav>
+
+      <div class="side-footer">
+        <div class="side-footer-title">IDBI Innovate 2026</div>
+        <div class="side-footer-sub">Prototype · v1.0</div>
+      </div>
+    </aside>
+
+    <!-- ─── MAIN CONTENT ────────────────────────────────────────── -->
+    <main class="content" id="content">
+      <!-- populated by app.js -->
+    </main>
+
+    <!-- ─── CHAT RAIL (docked right) ────────────────────────────── -->
+    <aside class="chat-rail" id="chatRail">
+      <div class="chat-rail-header">
+        <div class="chat-rail-title">
+          <div class="arya-orb" id="aryaOrb"></div>
+          <div>
+            <div class="chat-rail-name">Arya</div>
+            <div class="chat-rail-status"><span class="live-dot"></span> online · listening</div>
+          </div>
+        </div>
+        <button class="icon-btn small" id="clearChatBtn" title="Clear conversation">↻</button>
+      </div>
+      <div class="chat-rail-messages" id="chatMessages">
+        <!-- messages injected by app.js -->
+      </div>
+      <div class="chat-rail-input">
+        <form id="chatForm">
+          <input type="text" id="chatInput" placeholder="Ask Arya anything…" autocomplete="off">
+          <button type="submit" class="chat-send" title="Send">➤</button>
+        </form>
+        <div class="chat-suggest-row">
+          <button class="chip" data-suggest="Show my money">Money</button>
+          <button class="chip" data-suggest="Save on taxes">Tax</button>
+          <button class="chip" data-suggest="Cut my bills">Bills</button>
+          <button class="chip" data-suggest="Improve CIBIL">CIBIL</button>
+          <button class="chip" data-suggest="Can I afford an iPhone?">iPhone</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ═══ LANGUAGE DROPDOWN ═════════════════════════════════════════ -->
+  <div class="lang-menu" id="langMenu" hidden role="menu">
+    <button class="lang-opt" data-lang="en" role="menuitem">🇬🇧 English</button>
+    <button class="lang-opt" data-lang="hi" role="menuitem">🇮🇳 हिंदी</button>
+    <button class="lang-opt" data-lang="mr" role="menuitem">🇮🇳 मराठी</button>
+    <button class="lang-opt" data-lang="ta" role="menuitem">🇮🇳 தமிழ்</button>
+    <button class="lang-opt" data-lang="te" role="menuitem">🇮🇳 తెలుగు</button>
+    <button class="lang-opt" data-lang="kn" role="menuitem">🇮🇳 ಕನ್ನಡ</button>
+    <button class="lang-opt" data-lang="bn" role="menuitem">🇮🇳 বাংলা</button>
+    <button class="lang-opt" data-lang="gu" role="menuitem">🇮🇳 ગુજરાતી</button>
+    <button class="lang-opt" data-lang="pa" role="menuitem">🇮🇳 ਪੰਜਾਬੀ</button>
+  </div>
+
+  <!-- ═══ TOAST ═════════════════════════════════════════════════════ -->
+  <div class="toast" id="toast" hidden>
+    <div class="toast-icon">✓</div>
+    <div class="toast-body">
+      <div class="toast-title" id="toastTitle">Done</div>
+      <div class="toast-msg" id="toastMsg"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
